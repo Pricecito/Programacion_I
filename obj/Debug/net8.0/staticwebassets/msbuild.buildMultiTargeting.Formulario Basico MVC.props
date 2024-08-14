@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Formulario Basico MVC.props" />
+</Project>

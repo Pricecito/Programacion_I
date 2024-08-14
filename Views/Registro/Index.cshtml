@@ -1,0 +1,54 @@
+@model Formulario_Basico_MVC.Models.MiembroClub
+
+<h1>Formulario de registro</h1>
+<form asp-controller="Registro" asp-action="Registrar" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre:</label>
+        <input asp-for="Nombre" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Edad">Edad:</label>
+        <input asp-for="Edad" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Genero">Género:</label>
+        <br>
+        <input type="radio" asp-for="Genero" value="Masculino" >
+        <label>Masculino</label>
+        <br>
+        <input type="radio" asp-for="Genero" value="Femenino" >
+        <label>Femenino</label>
+    </div>
+    <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input asp-for="FechaNacimiento"class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Direccion">Dirección:</label>
+        <input asp-for="Direccion" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Distrito">Distrito:</label>
+        <select id="distrito" name="distrito" class="form-control">
+            <option value="Miraflores">Miraflores</option>
+            <option value="San Borja">San Borja</option>
+            <option value="Molina">Molina</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Membresia">Membresía:</label>
+        <select asp-for="Membresia" class="form-control">
+            <option asp-for="Membresia" value="Basica">Básica (S/ 500)</option>
+            <option asp-for="Membresia" value="Premium">Premium (S/ 1000)</option>
+        </select>
+    </div>
+    <br>
+        <input type="submit" value="Enviar" class="form-control" >
+    <br>
+</form>
+<h1>
+    @ViewData["Respuesta"]
+    <br>
+    @ViewData["Datos"]
+
+</h1>
